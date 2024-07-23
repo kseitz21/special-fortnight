@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    outline: 1px solid red;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #313131;
+    font-family: "Chivo", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+/*--Typography--*/
+
+h1 {
+    color: #9DA5EB;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+}
+
+h2 {
+    color: #F4F0EE;
+    text-align: center;
+    font-weight: 100;
+    margin: 10px auto;
+    position: relative;
+    width: fit-content;
+}
+
+h3 {
+    color: #9DA5EB;
+    text-align: center;
+    font-family: Chivo;
+    font-size: x-large;
+    font-style: normal;
+    font-weight: 600;
+}
+
+p {
+    display: flex;
+    color: #F4F0EE;
+    font-weight: 400;
+    line-height: 125%;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul {
+    width: 50%;
+    margin-left: auto;
+    color: #F4F0EE;
+    font-weight: 400;
+    list-style-type: none;
+    font-size: x-small;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+    text-align: end; 
+}
+
+nav li {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 20px 40px;
+}
+
+
+/* Button */
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #9DA5EB;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 20px;
+    border: 3px solid #9DA5EB;
+    background-color: #313131;
+}
+
+/*Bio Content */
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.headshot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.headshot button {
+    display: table-cell;
+    width: 200px;
+    font-size: large;
+    text-align: center;
+    margin: auto 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bio img {
+    height: 300px;
+    margin: 50px 50px 15px 50px;
+}
+
+.bio-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    max-width: 600px;
+}
+
+/* About Me Section*/
+
+.about-me-title {
+    position: relative;
+}
+
+.sparkle0 {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    align-self: flex-end;
+    z-index: -1;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    transform: rotate(15deg);
+}
+
+.about-me-title h1 {
+    color: #F4F0EE;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.about-me ul {
+    color: #F4F0EE;
+    font-weight: 400;
+    font-size: medium;
+    list-style-type: none;
+    margin-top: 0px;
+    line-height: 1rem;
+    list-style-position: outside;
+}
+
+.about-me li::before {
+    content: url("./Images/bullet-sparkle.svg");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    transform: scale(0.2);
+    fill: #9DA5EB;
+    stroke: #9DA5EB;
+    margin: 0px 5px 0px -48px
+}
+
+.about-me {
+    display: grid;
+    grid-template-rows: .5fr 1fr 0.1fr;
+    grid-template-columns: 40% 5% 10% 5% 40%;
+    grid-template-areas:
+        "edu-bg . sparkle1 . tools"
+        "personal-skills . sparkle2 . skills-hl"
+        ". resume-link resume-link resume-link sparkle5";
+    margin: 0px 100px 0px 100px;
+}
+
+.edu-bg {
+    grid-area: edu-bg;
+    border: 2px solid #9DA5EB;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.edu-bg ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-size: medium;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.edu-bg p {
+    font-style: italic;
+}
+
+.sparkle1 {
+    grid-area: sparkle1;
+    width: 129px;
+    height: 129px;
+    transform: rotate(-173.123deg);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.tools {
+    grid-area: tools;
+    border: 2px solid #9DA5EB;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.tools ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: medium;
+}
+
+.skills-hl {
+    position: relative;
+    grid-area: skills-hl;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    border: 2px solid #9DA5EB;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.skills-hl ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: medium;
+}
+
+.personal-skills {
+    grid-area: personal-skills;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    border: 2px solid #9DA5EB;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.personal-skills ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: medium;
+}
+
+.sparkle2 {
+    grid-area: sparkle2;
+    width: 129px;
+    height: 129px;
+    transform: scaleX(-1) rotate(-173.123deg);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.resume-link {
+    grid-area: resume-link;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-link button {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    align-items: center;
+    font-size: large;
+}
+
+.sparkle3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 42.75px;
+    height: 42.75px;
+    transform: rotate(17.089deg);
+    flex-shrink: 0;
+    margin: 5px;
+}
+
+.sparkle4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 42.75px;
+    height: 42.75px;
+    flex-shrink: 0;
+    transform: rotate(17deg);
+    margin: 5px;
+}
+
+.sparkle5 {
+    box-sizing: border-box;
+    z-index: -1;
+    position: absolute;
+    right: -27px;
+    bottom: -36px;
+    transform: rotate(21deg);
+}
+
+/*--Footer--*/
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+    font-size: x-small;
+    width: 50%;
+    margin-left: auto;
+    color: #F4F0EE;
+    font-weight: 400;
+    list-style-type: none;
+    font-size: x-small;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+    text-align: end; 
+}
+
+footer li {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 20px 40px;
+}
+
+@media only screen and (max-width:1000px) {
+    .sparkle1, .sparkle2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    /*Full Page*/
+    .sparkle {
+        display: none;
+    }
+    /*Header/Footer*/
+    nav {
+        width: 100%;
+    }
+    nav li, footer li {
+        display: flex;
+        padding: 0px 10px;
+    }
+    .logo {
+        width: 75px;
+    }
+    /*Typography*/
+    h1 {
+        font-size: xx-large;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+    p {
+        font-size: small;
+    }
+    /*Bio*/
+    .bio {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .bio img {
+        height: 150px;
+        margin: 25px 25px 15px 25px;
+    }
+    .headshot button {
+        width: 109px;
+        font-size: small;
+    }
+
+    .about-me-title h1 {
+        margin-top: 25px;
+    }
+    .about-me {
+        grid-template-rows: 0.2fr .8fr 1fr 1fr 0.1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "edu-bg"  
+            "tools"
+            "skills-hl"
+            "personal-skills"
+            "resume-link";
+        margin: 0px 20px 0px 20px;
+    }
+    .about-me ul {
+        font-size: small;
+        line-height: .5rem;
+    }
+    .edu-bg ul {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .resume-link button {
+        font-size: medium;
+    }
+    }
+
