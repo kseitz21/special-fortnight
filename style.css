@@ -175,6 +175,7 @@ button {
     margin-top: 0px;
     line-height: 1rem;
     list-style-position: outside;
+    margin: 20px 10px 20px 40px;
 }
 
 .about-me li::before {
